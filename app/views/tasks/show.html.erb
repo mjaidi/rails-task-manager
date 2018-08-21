@@ -1,0 +1,22 @@
+<div class="container">
+
+  <h1>Task Details</h1>
+
+  <hr>
+  <%= link_to edit_task_path(@task.id) do %>
+  <p><i class="fas fa-edit"></i> Edit</p>
+  <% end  %>
+  
+  <hr>
+  
+  <h4>Tittle: </h4><p><%=@task.title  %></p>
+  <h4>Details: </h4><p><%=@task.details  %></p>
+
+  <hr>
+  <%= link_to tasks_path do %>
+  <p><i class="fas fa-backward"></i> Back to list</p>
+  <% end  %>
+</div>
+
+
+

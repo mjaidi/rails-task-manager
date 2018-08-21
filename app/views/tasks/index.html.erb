@@ -1,0 +1,22 @@
+<div class="container">
+  
+  <h1>My Tasks</h1>
+  <hr>
+  <%= link_to new_task_path do %>
+  <p><i class="fas fa-plus-square"></i> New Task</p>
+  <% end  %>
+
+  <hr>
+  <ol>
+    <% @tasks.each do  |task| %>
+      <li>
+        <p><input type="checkbox" disabled="disabled" <%= task.completed ? "checked='checked'" : ''%>>  <%= link_to task.title, task_path(task.id) %>   
+
+          <%= link_to task_path(task.id), method: :delete, data: {confirm: "Are you sure?"} do %>
+                <i class="fas fa-trash-alt"></i>
+          <% end %></p>
+      </li>
+      <% end %>
+  </ol>
+
+</div>

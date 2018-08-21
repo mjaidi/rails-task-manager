@@ -1,0 +1,14 @@
+<div class="container">
+
+  <h1>Edit Task</h1>
+
+  <hr>
+
+  <%= render 'form', task: @task %>
+
+  <hr>
+  <%= link_to tasks_path do %>
+  <p><i class="fas fa-backward"></i> Back to list</p>
+  <% end  %>
+
+</div>
